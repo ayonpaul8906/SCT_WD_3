@@ -14,8 +14,8 @@ export const quizData = {
     { id: "eim01", type: "image-mcq", question: "This is the logo of which programming language?", imageUrl: "/python.png", options: ["Java", "C++", "Python", "Ruby"], answer: "Python", points: 10 },
     { id: "eim02", type: "image-mcq", question: "What electronic component is represented by this symbol?", imageUrl: "/resistor.png", options: ["Capacitor", "Diode", "Transistor", "Resistor"], answer: "Resistor", points: 10 },
     { id: "eim03", type: "image-mcq", question: "This diagram represents which type of network topology?", imageUrl: "/star-topology.png", options: ["Ring", "Bus", "Star", "Mesh"], answer: "Star", points: 10 },
-    { id: "eim04", type: "image-mcq", question: "What type of logic gate is shown here?", imageUrl: "/images/symbols/and-gate.png", options: ["OR", "NOT", "AND", "XOR"], answer: "AND", points: 10 },
-    { id: "eim05", type: "image-mcq", question: "This is the mascot for which version control system?", imageUrl: "/images/logos/github.png", options: ["SVN", "Mercurial", "Git", "CVS"], answer: "Git", points: 10 },
+    { id: "eim04", type: "image-mcq", question: "What type of logic gate is shown here?", imageUrl: "/and-gate.png", options: ["OR", "NOT", "AND", "XOR"], answer: "AND", points: 10 },
+    { id: "eim05", type: "image-mcq", question: "This is the mascot for which version control system?", imageUrl: "/github.png", options: ["SVN", "Mercurial", "Git", "CVS"], answer: "Git", points: 10 },
 
     // --- Fill in the Blanks (Easy) ---
     { id: "efb01", type: "fill-in-the-blanks", question: "The formula for Ohm's Law is Voltage = Current × ___.", options: ["Power", "Resistance", "Capacitance", "Inductance"], answer: ["Resistance"], points: 10 },
