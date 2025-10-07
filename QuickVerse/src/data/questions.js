@@ -75,11 +75,11 @@ export const quizData = {
     { id: "hss05", type: "single-select-mcq", question: "What does the 'L' in SOLID principles stand for?", options: ["Layered Abstraction Principle", "Lazy Initialization Principle", "Liskov Substitution Principle", "Low Coupling Principle"], answer: "Liskov Substitution Principle", points: 30 },
 
     // --- Image MCQ (Hard) ---
-    { id: "him01", type: "image-mcq", question: "This diagram represents which software architectural pattern?", imageUrl: "/images/diagrams/microservices.png", options: ["Monolithic", "Client-Server", "Microservices", "Peer-to-Peer"], answer: "Microservices", points: 30 },
-    { id: "him02", type: "image-mcq", question: "What is this self-balancing binary search tree called?", imageUrl: "/images/diagrams/red-black-tree.png", options: ["AVL Tree", "B-Tree", "Splay Tree", "Red-Black Tree"], answer: "Red-Black Tree", points: 30 },
-    { id: "him03", type: "image-mcq", question: "This diagram illustrates the process of what quantum phenomenon?", imageUrl: "/images/diagrams/quantum-tunneling.png", options: ["Superposition", "Entanglement", "Quantum Tunneling", "Decoherence"], answer: "Quantum Tunneling", points: 30 },
-    { id: "him04", type: "image-mcq", question: "This is the structure of a C60 molecule, also known as a Buckyball or ___.", imageUrl: "/images/diagrams/fullerene.png", options: ["Graphene", "Fullerene", "Carbon Nanotube", "Diamond"], answer: "Fullerene", points: 30 },
-    { id: "him05", type: "image-mcq", question: "This plot, used in control theory, is known as a ___ plot.", imageUrl: "/images/charts/bode-plot.png", options: ["Nyquist", "Nichols", "Bode", "Root Locus"], answer: "Bode", points: 30 },
+    { id: "him01", type: "image-mcq", question: "This diagram represents which software architectural pattern?", imageUrl: "/hard//microservices.png", options: ["Monolithic", "Client-Server", "Microservices", "Peer-to-Peer"], answer: "Microservices", points: 30 },
+    { id: "him02", type: "image-mcq", question: "What is this self-balancing binary search tree called?", imageUrl: "/hard//red-black-tree.png", options: ["AVL Tree", "B-Tree", "Splay Tree", "Red-Black Tree"], answer: "Red-Black Tree", points: 30 },
+    { id: "him03", type: "image-mcq", question: "This diagram illustrates the process of what quantum phenomenon?", imageUrl: "/hard//quantum-tunneling.png", options: ["Superposition", "Entanglement", "Quantum Tunneling", "Decoherence"], answer: "Quantum Tunneling", points: 30 },
+    { id: "him04", type: "image-mcq", question: "This is the structure of a C60 molecule, also known as a Buckyball or ___.", imageUrl: "/hard//fullerene.jpeg", options: ["Graphene", "Fullerene", "Carbon Nanotube", "Diamond"], answer: "Fullerene", points: 30 },
+    { id: "him05", type: "image-mcq", question: "This plot, used in control theory, is known as a ___ plot.", imageUrl: "/hard//bode-plot.png", options: ["Nyquist", "Nichols", "Bode", "Root Locus"], answer: "Bode", points: 30 },
 
     // --- Fill in the Blanks (Hard) ---
     { id: "hfb01", type: "fill-in-the-blanks", question: "In the context of ACID properties for transactions, 'C' stands for ___.", options: ["Concurrency", "Consistency", "Capacity", "Correctness"], answer: ["Consistency"], points: 30 },
