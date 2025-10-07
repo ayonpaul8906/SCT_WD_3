@@ -43,11 +43,11 @@ export const quizData = {
     { id: "mss05", type: "single-select-mcq", question: "What is the name of the process of converting a liquid into a gas?", options: ["Condensation", "Sublimation", "Evaporation", "Deposition"], answer: "Evaporation", points: 20 },
 
     // --- Image MCQ (Medium) ---
-    { id: "mim01", type: "image-mcq", question: "This diagram represents which data structure?", imageUrl: "/images/diagrams/linked-list.png", options: ["Queue", "Stack", "Linked List", "Binary Tree"], answer: "Linked List", points: 20 },
-    { id: "mim02", type: "image-mcq", question: "What is the output of this logic gate if both inputs are 1?", imageUrl: "/images/symbols/xor-gate.png", options: ["1", "0", "Undefined", "Both 1 and 0"], answer: "0", points: 20 },
-    { id: "mim03", type: "image-mcq", question: "This is the logo of which popular JavaScript runtime environment?", imageUrl: "/images/logos/nodejs.png", options: ["Deno", "Bun", "Node.js", "Electron"], answer: "Node.js", points: 20 },
-    { id: "mim04", type: "image-mcq", question: "This image shows the structure of which famous molecule?", imageUrl: "/images/diagrams/dna.png", options: ["Methane", "Water", "Benzene", "DNA"], answer: "DNA", points: 20 },
-    { id: "mim05", type: "image-mcq", question: "This type of chart, used in project management, is called a ___ chart.", imageUrl: "/images/charts/gantt-chart.png", options: ["Pie", "Gantt", "Bar", "Flow"], answer: "Gantt", points: 20 },
+    { id: "mim01", type: "image-mcq", question: "This diagram represents which data structure?", imageUrl: "/linked-list.png", options: ["Queue", "Stack", "Linked List", "Binary Tree"], answer: "Linked List", points: 20 },
+    { id: "mim02", type: "image-mcq", question: "What is the output of this logic gate if both inputs are 1?", imageUrl: "/xor-gate.png", options: ["1", "0", "Undefined", "Both 1 and 0"], answer: "0", points: 20 },
+    { id: "mim03", type: "image-mcq", question: "This is the logo of which popular JavaScript runtime environment?", imageUrl: "/nodejs.png", options: ["Deno", "Bun", "Node.js", "Electron"], answer: "Node.js", points: 20 },
+    { id: "mim04", type: "image-mcq", question: "This image shows the structure of which famous molecule?", imageUrl: "/glucose.png", options: ["Methane", "Fructose", "Benzene", "Glucose"], answer: "DNA", points: 20 },
+    { id: "mim05", type: "image-mcq", question: "This type of chart, used in project management, is called a ___ chart.", imageUrl: "/gantt-chart.png", options: ["Pie", "Gantt", "Bar", "Flow"], answer: "Gantt", points: 20 },
 
     // --- Fill in the Blanks (Medium) ---
     { id: "mfb01", type: "fill-in-the-blanks", question: "A ___ is a software design pattern that restricts the instantiation of a class to one object.", options: ["Factory", "Singleton", "Observer", "Builder"], answer: ["Singleton"], points: 20 },
