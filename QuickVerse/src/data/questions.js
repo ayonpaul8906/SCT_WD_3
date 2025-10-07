@@ -11,11 +11,11 @@ export const quizData = {
     { id: "ess05", type: "single-select-mcq", question: "What is the primary purpose of a CPU?", options: ["Store data long-term", "Render graphics", "Execute instructions", "Manage network traffic"], answer: "Execute instructions", points: 10 },
 
     // --- Image MCQ (Easy) ---
-    { id: "eim01", type: "image-mcq", question: "This is the logo of which programming language?", imageUrl: "/python.png", options: ["Java", "C++", "Python", "Ruby"], answer: "Python", points: 10 },
-    { id: "eim02", type: "image-mcq", question: "What electronic component is represented by this symbol?", imageUrl: "/resistor.png", options: ["Capacitor", "Diode", "Transistor", "Resistor"], answer: "Resistor", points: 10 },
-    { id: "eim03", type: "image-mcq", question: "This diagram represents which type of network topology?", imageUrl: "/star-topology.png", options: ["Ring", "Bus", "Star", "Mesh"], answer: "Star", points: 10 },
-    { id: "eim04", type: "image-mcq", question: "What type of logic gate is shown here?", imageUrl: "/and-gate.png", options: ["OR", "NOT", "AND", "XOR"], answer: "AND", points: 10 },
-    { id: "eim05", type: "image-mcq", question: "This is the mascot for which version control system?", imageUrl: "/github.png", options: ["SVN", "Mercurial", "Git", "CVS"], answer: "Git", points: 10 },
+    { id: "eim01", type: "image-mcq", question: "This is the logo of which programming language?", imageUrl: "/easy/python.png", options: ["Java", "C++", "Python", "Ruby"], answer: "Python", points: 10 },
+    { id: "eim02", type: "image-mcq", question: "What electronic component is represented by this symbol?", imageUrl: "/easy/resistor.png", options: ["Capacitor", "Diode", "Transistor", "Resistor"], answer: "Resistor", points: 10 },
+    { id: "eim03", type: "image-mcq", question: "This diagram represents which type of network topology?", imageUrl: "/easy/star-topology.png", options: ["Ring", "Bus", "Star", "Mesh"], answer: "Star", points: 10 },
+    { id: "eim04", type: "image-mcq", question: "What type of logic gate is shown here?", imageUrl: "/easy/and-gate.png", options: ["OR", "NOT", "AND", "XOR"], answer: "AND", points: 10 },
+    { id: "eim05", type: "image-mcq", question: "This is the mascot for which version control system?", imageUrl: "/easy/github.png", options: ["SVN", "Mercurial", "Git", "CVS"], answer: "Git", points: 10 },
 
     // --- Fill in the Blanks (Easy) ---
     { id: "efb01", type: "fill-in-the-blanks", question: "The formula for Ohm's Law is Voltage = Current × ___.", options: ["Power", "Resistance", "Capacitance", "Inductance"], answer: ["Resistance"], points: 10 },
