@@ -1,8 +1,8 @@
-# QuizVerse 🚀
+ # <img width="35" height="35" alt="image" src="/logo.png" /> QuizVerse 
 
 A sleek, modern, and interactive quiz application built with React, featuring multiple question types, a level-based progression system, and a host of gamification elements. This project showcases a top-notch UI with a dynamic particle background, glassmorphism effects, and fluid animations.
 
-![QuizVerse Level Select Screen](https://i.imgur.com/gK3yXyN.png)
+
 
 ---
 
