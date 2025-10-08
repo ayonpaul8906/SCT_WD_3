@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiLock, FiPlayCircle, FiCheckCircle } from 'react-icons/fi';
-// ADDED: Import the Tilt component
 import Tilt from 'react-parallax-tilt';
 
 const levels = [
@@ -15,52 +14,62 @@ const LevelSelectScreen = ({ onLevelSelect, unlockedLevels }) => {
     <motion.div
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
-      className="text-center w-full max-w-4xl"
+      className="text-center w-full max-w-5xl"
     >
-      {/* CHANGED: Added gradient text effect to the main title */}
-      <h1 className="text-5xl font-bold mb-4 tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
+      <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500" style={{ textShadow: '0 4px 12px rgba(178, 9, 214, 0.4)' }}>
         Start Your Journey
       </h1>
-      <p className="text-text-secondary mb-12">Complete a level with 70% score to unlock the next challenge.</p>
+      <p className="text-text-secondary mb-16">Complete a level with 70% score to unlock the next challenge.</p>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         {levels.map((level) => {
           const isUnlocked = unlockedLevels.includes(level.difficulty);
-          const isCompleted = unlockedLevels.indexOf(level.difficulty) < unlockedLevels.length - 1;
+          const isCompleted = isUnlocked && unlockedLevels.indexOf(level.difficulty) < unlockedLevels.length - 1;
+
+          // Define the state-specific icon and its color
+          let icon = null;
+          if (isCompleted) {
+            icon = <FiCheckCircle size={24} className="text-green-400" />;
+          } else if (!isUnlocked) {
+            icon = <FiLock size={24} className="text-gray-500" />;
+          }
 
           return (
-            // ADDED: Wrapped the card in the Tilt component for a 3D hover effect
             <Tilt
               key={level.name}
-              tiltMaxAngleX={7}
-              tiltMaxAngleY={7}
-              glareEnable={true}
-              glareMaxOpacity={0.15}
+              tiltEnable={isUnlocked}
               scale={1.05}
+              tiltMaxAngleX={4} // More subtle tilt
+              tiltMaxAngleY={4}
+              transitionSpeed={1500}
+              className="transform-gpu"
             >
               <motion.div
-                className={`p-8 h-full rounded-2xl transition-all duration-300 relative overflow-hidden ${
-                  isUnlocked 
-                    // CHANGED: Applied the "glassmorphism" effect
-                    ? 'bg-white/10 backdrop-blur-lg border border-white/20 cursor-pointer shadow-lg shadow-accent/10' 
-                    : 'bg-gray-800/50 text-gray-500'
-                }`}
                 onClick={() => isUnlocked && onLevelSelect(level.difficulty)}
+                className={`relative h-64 flex flex-col justify-center items-center p-8 rounded-2xl transition-all duration-300 bg-gray-900/40 backdrop-blur-md border border-gray-700
+                  ${isUnlocked 
+                    ? 'cursor-pointer hover:border-purple-500 hover:shadow-2xl hover:shadow-purple-500/20' 
+                    : 'opacity-60 cursor-not-allowed'
+                  }
+                  ${isCompleted && '!border-green-500/50'}` // Add a subtle green border if completed
+                }
               >
-                {isCompleted && (
-                  <FiCheckCircle className="absolute top-4 right-4 text-green-500" size={24} />
-                )}
-                {!isUnlocked && (
-                  <FiLock className="absolute top-4 right-4" size={24} />
+                {icon && (
+                  <div className="absolute top-4 right-4">
+                    {icon}
+                  </div>
                 )}
                 
-                {/* CHANGED: Ensured heading text is white */}
-                <h2 className="text-3xl font-bold mb-2 text-white">{level.name}</h2>
-                <p className="text-sm text-text-secondary">{level.description}</p>
+                <h2 className="text-4xl font-bold mb-2 text-white [text-shadow:0_2px_4px_rgba(0,0,0,0.7)]">
+                  {level.name}
+                </h2>
+                <p className="text-gray-300 [text-shadow:0_1px_2px_rgba(0,0,0,0.7)]">
+                  {level.description}
+                </p>
                 
                 {isUnlocked && (
-                  <div className="mt-6">
-                    <FiPlayCircle size={40} className="mx-auto text-accent" />
+                  <div className="absolute bottom-8">
+                    <FiPlayCircle size={40} className={`transition-colors duration-300 ${isCompleted ? 'text-green-400' : 'text-accent'}`} />
                   </div>
                 )}
               </motion.div>

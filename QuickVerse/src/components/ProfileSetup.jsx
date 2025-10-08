@@ -52,7 +52,7 @@ const ProfileSetup = ({ onSave }) => {
       <button
         onClick={handleSave}
         disabled={!name.trim() || !selectedAvatar}
-        className="text-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 py-4 px-12 rounded-full transition-all duration-300 shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-pink-500/50 transform hover:-translate-y-1 disabled:bg-none disabled:bg-gray-500 disabled:opacity-50 disabled:shadow-none disabled:transform-none flex items-center justify-center mx-auto"
+        className="text-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 py-4 px-12 rounded-full transition-all duration-300 shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-pink-500/50 transform hover:-translate-y-1 disabled:bg-none disabled:bg-gray-500 disabled:opacity-50 disabled:shadow-none disabled:transform-none hover:cursor-pointer flex items-center justify-center mx-auto"
       >
          Start
       </button>

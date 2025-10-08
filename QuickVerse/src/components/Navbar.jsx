@@ -10,7 +10,7 @@ const Navbar = ({ onShowLeaderboard, onShowProfile }) => {
       <div className="max-w-5xl mx-4 px-4">
         <div className="flex items-center justify-between h-16">
           <a href="/" className="text-2xl font-bold text-white flex items-center transform transition-transform duration-300 hover:scale-105">
-            <FiZap className="mr-2" />
+            <img src="/logo.png" alt="logo" className='h-10 w-10' />
             QuizVerse
           </a>
           

@@ -108,7 +108,7 @@ const FillInTheBlanksQuestion = ({ question, onAnswer, isAnswered }) => {
   return (
     <>
       <div className="bg-primary/50 border border-white/10 p-6 rounded-lg mb-8 text-center">
-        <h2 className="text-3xl font-bold text-text-primary tracking-wider">{questionText}</h2>
+        <h2 className="text-3xl font-bold text-white tracking-wider">{questionText}</h2>
       </div>
       <div className="flex flex-wrap justify-center gap-4">
         {question.options.map((option) => (
