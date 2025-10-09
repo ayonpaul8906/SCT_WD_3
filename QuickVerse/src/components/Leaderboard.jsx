@@ -19,7 +19,6 @@ const Leaderboard = ({ onClose }) => {
       className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4"
       onClick={onClose}
     >
-      {/* CHANGED: Applied the "glassmorphism" effect to the modal */}
       <motion.div
         initial={{ scale: 0.8, y: 50 }}
         animate={{ scale: 1, y: 0 }}
@@ -28,7 +27,6 @@ const Leaderboard = ({ onClose }) => {
         className="bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl shadow-accent/20 w-full max-w-md p-6 border border-white/20"
       >
         <div className="flex justify-between items-center mb-6">
-          {/* CHANGED: Applied the gradient text effect to the title */}
           <h2 className="text-3xl font-bold flex items-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
             <FiAward className="mr-3 text-purple-400" />
             High Scores

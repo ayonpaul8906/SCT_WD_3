@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-// CHANGED: Import 'loadFull' from 'tsparticles'
 import { loadFull } from "tsparticles"; 
 
 // Component Imports
@@ -22,7 +21,6 @@ function App() {
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      // CHANGED: Call 'loadFull' instead of 'loadSlim'
       await loadFull(engine);
     }).then(() => {
       setInit(true);

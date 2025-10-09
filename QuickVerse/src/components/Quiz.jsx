@@ -21,7 +21,6 @@ const useWindowSize = () => {
 };
 
 const Quiz = ({ userProfile }) => {
-  // Game state can be: 'level-select', 'playing', 'level-complete'
   const [gameState, setGameState] = useState('level-select');
   
   // State for quiz mechanics
@@ -46,13 +45,11 @@ const Quiz = ({ userProfile }) => {
 
   const { width, height } = useWindowSize();
 
-  // Save progress to localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem('unlockedLevels', JSON.stringify(unlockedLevels));
     localStorage.setItem('totalScore', totalScore.toString());
   }, [unlockedLevels, totalScore]);
   
-  // Saves the final score to the leaderboard
   const saveScoreToLeaderboard = (name, finalScore) => {
     const newScore = { name, score: finalScore };
     const savedScores = JSON.parse(localStorage.getItem('quizLeaderboard')) || [];
@@ -62,7 +59,6 @@ const Quiz = ({ userProfile }) => {
     localStorage.setItem('quizLeaderboard', JSON.stringify(topScores));
   };
 
-  // Handles the logic at the end of a level
   const handleLevelCompletion = () => {
     const totalPoints = questions.reduce((sum, q) => sum + q.points, 0);
     const percentage = totalPoints > 0 ? (score / totalPoints) * 100 : 0;
@@ -80,12 +76,9 @@ const Quiz = ({ userProfile }) => {
           setUnlockedLevels([...unlockedLevels, nextLevel]);
         }
       } else {
-        // Game is finished after the 'hard' level
-        // Automatically use the profile name for the leaderboard
         if (userProfile.name) {
           saveScoreToLeaderboard(userProfile.name, newTotalScore);
         }
-        // Reset for a new game
         setTotalScore(0);
         setUnlockedLevels(['easy']);
       }
@@ -95,13 +88,12 @@ const Quiz = ({ userProfile }) => {
   
   const selectLevel = (level) => {
     if (level === 'easy' && unlockedLevels.length > 1) {
-      // If user starts over from easy, reset their progress
       const confirmReset = window.confirm("Starting from 'Easy' will reset your total score. Are you sure you want to continue?");
       if (confirmReset) {
         setTotalScore(0);
         setUnlockedLevels(['easy']);
       } else {
-        return; // Do not start the level if user cancels
+        return; 
       }
     }
     setCurrentLevel(level);
@@ -109,7 +101,6 @@ const Quiz = ({ userProfile }) => {
   };
   
   const startQuiz = (level) => {
-    // Take 10 random questions from the selected level
     const levelQuestions = quizData[level].sort(() => Math.random() - 0.5).slice(0, 10);
     setQuestions(levelQuestions);
     setGameState('playing');
@@ -133,7 +124,6 @@ const Quiz = ({ userProfile }) => {
     }
   }, [currentQuestionIndex, questions.length, score, totalScore, currentLevel, unlockedLevels]);
 
-  // The correct timer logic
   useEffect(() => {
     if (gameState === 'playing' && !isAnswered) {
       const timer = setInterval(() => {

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { avatars } from '../data/avatars.js';
-// import { FiRocket } from 'react-icons/fi'; 
 
 const ProfileSetup = ({ onSave }) => {
   const [name, setName] = useState('');

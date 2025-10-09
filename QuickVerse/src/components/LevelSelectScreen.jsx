@@ -26,7 +26,6 @@ const LevelSelectScreen = ({ onLevelSelect, unlockedLevels }) => {
           const isUnlocked = unlockedLevels.includes(level.difficulty);
           const isCompleted = isUnlocked && unlockedLevels.indexOf(level.difficulty) < unlockedLevels.length - 1;
 
-          // Define the state-specific icon and its color
           let icon = null;
           if (isCompleted) {
             icon = <FiCheckCircle size={24} className="text-green-400" />;
@@ -39,7 +38,7 @@ const LevelSelectScreen = ({ onLevelSelect, unlockedLevels }) => {
               key={level.name}
               tiltEnable={isUnlocked}
               scale={1.05}
-              tiltMaxAngleX={4} // More subtle tilt
+              tiltMaxAngleX={4} 
               tiltMaxAngleY={4}
               transitionSpeed={1500}
               className="transform-gpu"
@@ -51,7 +50,7 @@ const LevelSelectScreen = ({ onLevelSelect, unlockedLevels }) => {
                     ? 'cursor-pointer hover:border-purple-500 hover:shadow-2xl hover:shadow-purple-500/20' 
                     : 'opacity-60 cursor-not-allowed'
                   }
-                  ${isCompleted && '!border-green-500/50'}` // Add a subtle green border if completed
+                  ${isCompleted && '!border-green-500/50'}` 
                 }
               >
                 {icon && (

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-// --- Shared Styles ---
+
 const questionTitleClasses = "text-3xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-white";
 
 // --- Standard Question Component (Single-Select & Image) ---
@@ -76,7 +76,6 @@ const MultiSelectQuestion = ({ question, onAnswer, isAnswered }) => {
         ))}
       </div>
       <div className="mt-8 text-center">
-        {/* CHANGED: Applied Tailwind utility classes directly for the green button style */}
         <button
           onClick={() => onAnswer(selected)}
           disabled={isAnswered || selected.length === 0}
@@ -123,7 +122,6 @@ const FillInTheBlanksQuestion = ({ question, onAnswer, isAnswered }) => {
         ))}
       </div>
       <div className="mt-8 text-center">
-        {/* CHANGED: Applied Tailwind utility classes directly for the green button style */}
         <button
           onClick={() => onAnswer(filledAnswer)}
           disabled={isAnswered || !filledAnswer}
@@ -139,7 +137,6 @@ const FillInTheBlanksQuestion = ({ question, onAnswer, isAnswered }) => {
 // --- Main Display Component ---
 const QuestionDisplay = ({ question, onAnswer, isAnswered }) => {
   const renderQuestionType = () => {
-    // ... switch statement remains the same
     switch (question.type) {
       case 'single-select-mcq':
       case 'image-mcq':

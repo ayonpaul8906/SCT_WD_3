@@ -5,7 +5,6 @@ const Navbar = ({ onShowLeaderboard, onShowProfile }) => {
   const navLinkClasses = "font-semibold text-text-secondary hover:text-accent transform transition-all duration-300 hover:-translate-y-0.5";
 
   return (
-    // CHANGED: New background, removed the border, and added a custom purple glow shadow.
     <nav className="bg-gray-950/70 backdrop-blur-lg w-full sticky top-0 z-50 shadow-[0_8px_32px_0_rgba(111,0,255,0.15)]">
       <div className="max-w-5xl mx-4 px-4">
         <div className="flex items-center justify-between h-16">

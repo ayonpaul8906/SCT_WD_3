@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { motion, animate } from 'framer-motion';
 import { FiCheckCircle, FiXCircle, FiRefreshCw, FiArrowRight } from 'react-icons/fi';
 
-// A reusable component for the animated number counter
 const Counter = ({ from = 0, to }) => {
   const nodeRef = React.useRef();
 
